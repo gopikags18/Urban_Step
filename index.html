@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation site</title>
+
+
+<link rel="stylesheet" href="./style.css">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Engagement&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+
+ <div class="container-fluid w-100">
+
+<!-------------------------------------- nav bar ------------------------------------------------------------------>
+
+<nav class="navbar" style="height: 200px; width: 100%;">
+<div class="portion1" style="height: 200px; width: 100%;">
+
+  <div class="icons"  >
+    <video src="./images/Urban Step.mp4" autoplay loop muted  style="height: 300px; width: 150px; margin-left: -250px;"></video>
+   <!-- <div> <i class="fa-regular fa-user"  style="color: #000000; font-size: 20px;"></i> </div>&nbsp;
+    <i class="fa-solid fa-bell fa-shake" style="color: #000000;transition: 3000; font-size: 25px;"></i> -->
+  </div>  
+
+  <div class="heading">
+
+    <p class="urban">Urban Step</p>
+
+  </div>
+
+
+  <div class="off ms-0" style="margin-right: -210px;">
+    <button class="btn btn-dark " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menu</button>
+  
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="offcanvasScrollingLabel">Options</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul>
+      <li><a href="">Trending</a></li>
+      <li><a href="">New Collections</a></li>
+      <li><a href="">Women</a></li>
+      <li><a href="">Men</a></li>
+      <li><a href="">Apparels</a></li>
+      <li><a href="">Accessories</a></li>
+      <li><a href="">Brands</a></li>
+      <li><a href="">Sneakers</a></li>
+
+      </ul>
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-success" type="button">Sign Up</button>
+        <button class="btn btn-outline-primary" type="button">Log In</button>
+        
+        </div>
+
+    </div>
+  </div>
+  
+  </div>
+  
+
+
+<div class="icons2" style="margin-right: -200px;"> 
+   <div class="cart-container">
+    <i class="fa-solid fa-cart-shopping fs-4" style="color: #000000;"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        9+
+        <span class="visually-hidden">unread messages</span>
+    </span>
+</div>
+&nbsp; &nbsp;&nbsp;&nbsp;
+<div class="cart-container">
+  <i class="fa-regular fa-heart fs-4" style="color: #000000;"></i>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      20+
+      <span class="visually-hidden">unread messages</span>
+  </span>
+</div>
+&nbsp; &nbsp;&nbsp;&nbsp;
+<div class="cart-container">
+  <i class="fa-regular fa-user fs-4" style="color: #000000;"></i>
+  <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+    <span class="visually-hidden">New alerts</span>
+  </span>
+</div>
+
+</div>   
+
+  </div>
+
+</nav>
+
+<hr>
+
+
+<div class="carousel_main">
+
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/CONVERSE_CHUCKTAYLOR_3.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel2.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel3.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/feet.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/hoodiecarousal.webp" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+</div>
+<br><br>
+
+<h1>New Arrivals</h1> <br> <br>
+
+<div class="imagebox">
+
+
+  <div class="product ms-4">
+    <img class="default-img" src="./images/redi1.webp" alt="Sneaker">
+    <img class="hover-img" src="./images/redi2.webp" alt="Sneaker">
+    <div class="content ms-3 mt-3 p-0">
+      <p style="color: gray;">Adidas Orginals</p>
+      <h4>Retro Sports Wear</h4>
+      
+    </div>
+      <p class="ms-3 p-0" style="color: gray;">Rust Red <br>
+      <span style="color: black;">₹3000</span></p> 
+      <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+<div class="product">
+  <img class="default-img" src="./images/girl1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/girl2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Adidas Orginals</p>
+    <h4> Retro Varsity Vest </h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Off White<br>
+    <span style="color: black;">₹5300</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product">
+  <img class="default-img" src="./images/redboy1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/redboy2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Adidas Orginals</p>
+    <h4>Retro Sports Gym Wear</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Rust Red <br>
+    <span style="color: black;">₹10,999</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product">
+  <img class="default-img" src="./images/whitegirl1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/whitegirl2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Adidas Orginals</p>
+    <h4>WMN'S Retro Spl</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Off White <br>
+    <span style="color: black;">₹6,999</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+
+</div>
+
+<br><br>
+
+<h1>Brands we use</h1> <br> <br>
+
+
+<div class="marquee">
+  <div class="marquee-content">
+      <img src="./images/adidas.png" alt="Image 1">
+      <img src="./images/birkenstock.png" alt="Image 2">
+      <img src="./images/convorse.webp" alt="Image 3">
+      <img src="./images/h&m.png" alt="Image 4">
+      <img src="./images/Vans-logo.png" alt="Image 1">  
+      <img src="./images/asics-logo-png_seeklogo-305773.png" alt="Image 2">
+      <img src="./images/versace-removebg-preview.png" alt="Image 3">
+      <img src="./images/zara.png" alt="Image 4">
+      <img src="./images/prada.png" alt="Image 4">
+      <img src="./images/nike.jpg" alt="Image 4">
+      <img src="./images/jordan.jpg" alt="Image 4">
+     
+
+  </div>
+</div>
+
+<br><br>
+
+<h1>Trending Apparel</h1> <br> <br>
+
+<div class="imagebox">
+
+
+  <div class="product ms-4">
+    <img class="default-img" src="./images/greengirl1.webp" alt="Sneaker">
+    <img class="hover-img" src="./images/greengirl2.webp" alt="Sneaker">
+    <div class="content ms-3 mt-3 p-0">
+      <p style="color: gray;">Sporty and Rich</p>
+      <h4>Serif Logo Tee</h4>
+      
+    </div>
+      <p class="ms-3 p-0" style="color: gray;">Verde/White <br>
+      <span style="color: black;">₹9,199</span></p> 
+      <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ">
+  <img class="default-img" src="./images/beigepants1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/beigepants2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Puma</p>
+    <h4>Palais Artisan Pants</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Off White <br>
+    <span style="color: black;">₹7,844</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+
+<div class="product ">
+  <img class="default-img" src="./images/whitehoodie1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/whitehoodie2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Sporty and Rich</p>
+    <h4>WMN'S NY Crest Hoodie</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Gold/White<br>
+    <span style="color: black;">₹8500</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ">
+  <img class="default-img" src="./images/bluejacket1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/bluejacket2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Sporty and Rich</p>
+    <h4>Vendome Quilted Jacket</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Navy <br>
+    <span style="color: black;">₹10,999</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+</div>
+<br><br>
+
+<section class="parallax-section w-100">
+ 
+  <div class="text-center">
+    <h1 style="color:whitesmoke;">Urban Step </h1> 
+    <h2>The Ultimate Place For Your Trend Set</h2>
+   <br>
+      <a href="#" class="btn btn-outline-secondary btn-lg mt-0">View Collections</a>
+    </div>
+</section>
+<br><br>
+
+
+<h1>Trending Sneakers</h1> <br> <br>
+
+<div class="imagebox">
+
+
+  <div class="product ms-4">
+    <img class="default-img" src="./images/convorse1.webp" alt="Sneaker">
+    <img class="hover-img" src="./images/convorse2.webp" alt="Sneaker">
+    <div class="content ms-3 mt-3 p-0">
+      <p style="color: gray;">Nike</p>
+      <h4>AirForce 1 '07</h4>
+      
+    </div>
+      <p class="ms-3 p-0" style="color: gray;">Triple White<br>
+        <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹7945</span></p> 
+      <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+<div class="product">
+  <img class="default-img" src="./images/convobrown1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/convobrown2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Convorse</p>
+    <h4>Chuck 70</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Brown <br>
+      <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹5,499</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product">
+  <img class="default-img" src="./images/redpuma1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/redpuma2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Puma</p>
+    <h4>WMN'S Palermo</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Salmon/Lime-Sheen-Gum <br>
+    <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹6,999</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+<div class="product">
+  <img class="default-img" src="./images/greenshoes1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/greenshoes2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Asics</p>
+    <h4>GEL-LYTE III OG</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Dark Neptune/Midnight <br>
+      <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹10,999</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+
+
+
+
+
+</div>
+<section class="parallax w-100">
+  <video autoplay loop muted>
+    <source src="./images/background video.mp4">
+  
+</video>
+  <div class="text-center">
+  <h1> Step into Style. Step into Urban Step.</h1> <br>
+      <h2>Unleash Your Urban Vibe</h2>
+     <br>
+      <a href="#" class="btn btn-outline-light btn-lg mt-0">View Latest Trends</a>
+    </div>
+</section>
+<br><br>
+
+<h1>With Offers</h1> <br> <br>
+<div class="imagebox">
+
+
+  <div class="product ms-4">
+    <img class="default-img" src="./images/sweatpant1.webp" alt="Sneaker">
+    <img class="hover-img" src="./images/sweatpant2.webp" alt="Sneaker">
+    <div class="content ms-3 mt-3 p-0">
+      <p style="color: gray;">Adidas Orginals</p>
+      <h4>Signature Sweatpants</h4>
+      
+    </div>
+      <p class="ms-3 p-0" style="color: gray;">Midnight Black <br>
+        <div class="price-container">
+          <span class="original-price ms-3">₹5000</span>
+          <span class="discounted-price">₹3500</span>
+          <span class="discount-percent">30% OFF</span>
+      </div> <br>
+      <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ">
+  <img class="default-img" src="./images/cap1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/cap2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Jordan</p>
+    <h4>AirJordan Pro Bill Hat</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Off Noir <br>
+      <div class="price-container">
+        <span class="original-price ms-3">₹1995</span>
+        <span class="discounted-price">₹989</span>
+        <span class="discount-percent">50% OFF</span>
+    </div> <br>
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+<div class="product ">
+  <img class="default-img" src="./images/pink1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/pink2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Puma</p>
+    <h4>SpeedCat OG</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Pink/White <br>
+      <div class="price-container">
+        <span class="original-price ms-3">₹6900</span>
+        <span class="discounted-price">₹4210</span>
+        <span class="discount-percent">20% OFF</span>
+    </div> <br> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ">
+  <img class="default-img" src="./images/hermes1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/hermes2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Represent</p>
+    <h4>Hermes T-Shirt</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Purple <br>
+      <div class="price-container">
+        <span class="original-price ms-3">₹7855</span>
+        <span class="discounted-price">₹5200</span>
+        <span class="discount-percent">30% OFF</span>
+    </div> <br>
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+</div><br> <br>
+
+
+
+<div class="photoflex">
+  <div class="photo">
+      <img src="./images/bigpic1.webp" alt="">
+      <div class="overlay">Explore</div>
+  </div>
+
+  <div class="photo">
+      <img src="./images/bigpic2.webp" alt="">
+      <div class="overlay">Explore</div>
+  </div>
+</div>
+
+
+<br><br>
+
+<h1>Best Sellers</h1> <br> <br>
+
+<div class="imagebox">
+
+
+  <div class="product ms-4">
+    <img class="default-img" src="./images/blackpants1.webp" alt="Sneaker">
+    <img class="hover-img" src="./images/blackpants2.webp" alt="Sneaker">
+    <div class="content ms-3 mt-3 p-0">
+      <p style="color: gray;">Represent</p>
+      <h4>247 Zip Pant</h4>
+      
+    </div>
+      <p class="ms-3 p-0" style="color: gray;">Black <br>
+        <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹17,599</span></p> 
+      <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+<div class="product ms-4">
+  <img class="default-img" src="./images/nikeshoebox1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/nikeshoebox2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Nike</p>
+    <h4>Nike Shoe Box Bag</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">University Blue/Summit White <br>
+      <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹2,295</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ms-4">
+  <img class="default-img" src="./images/shorts1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/shorts2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Represent</p>
+    <h4>Owners Club Mesh Short</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Black<br>
+      <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹7,699</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+<div class="product ms-4">
+  <img class="default-img" src="./images/bluewoman1.webp" alt="Sneaker">
+  <img class="hover-img" src="./images/bluewoman2.webp" alt="Sneaker">
+  <div class="content ms-3 mt-3 p-0">
+    <p style="color: gray;">Nike</p>
+    <h4>WMN'S Sports Wear Futura 365</h4>
+    
+  </div>
+    <p class="ms-3 p-0" style="color: gray;">Jade Horizon/Vintage Green<br>
+      <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹2,495</span></p> 
+    <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+</div>
+
+
+</div>
+
+
+<div class="mainflex">
+
+  <div class="multiplephotos">
+    <div class="product ms-4">
+      <img class="default-img" src="./images/brown1.webp" alt="Sneaker">
+      <img class="hover-img" src="./images/brown2.webp" alt="Sneaker">
+      <div class="content ms-3 mt-3 p-0">
+        <p style="color: gray;">New Balance</p>
+        <h4>327</h4>
+        
+      </div>
+        <p class="ms-3 p-0" style="color: gray;">Brown/Beige <br>
+          <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹7899</span></p> 
+        <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+    </div>
+
+
+    <div class="product ">
+      <img class="default-img" src="./images/whitetshirt1.webp" alt="Sneaker">
+      <img class="hover-img" src="./images/whitetshirt2.webp" alt="Sneaker">
+      <div class="content ms-3 mt-3 p-0">
+        <p style="color: gray;">Almost Gods</p>
+        <h4>Almost Gods Recon Tee</h4>
+        
+      </div>
+        <p class="ms-3 p-0" style="color: gray;">Off White<br>
+          <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹5,500</span></p> 
+        <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+    </div>
+
+
+    <div class="product ms-4">
+      <img class="default-img" src="./images/baldgirl1.webp" alt="Sneaker">
+      <img class="hover-img" src="./images/baldgirl2.webp" alt="Sneaker">
+      <div class="content ms-3 mt-3 p-0">
+        <p style="color: gray;">Nike</p>
+        <h4>WMN'S SportsWear Luxe</h4>
+        
+      </div>
+        <p class="ms-3 p-0" style="color: gray;">Black/White<br>
+          <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹2,695</span></p> 
+        <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+    </div>
+
+
+    <div class="product ">
+      <img class="default-img" src="./images/purple1.webp" alt="Sneaker">
+      <img class="hover-img" src="./images/purple2.webp" alt="Sneaker">
+      <div class="content ms-3 mt-3 p-0">
+        <p style="color: gray;">Almost Gods</p>
+        <h4>Almost Gods Recon Shirt</h4>
+        
+      </div>
+        <p class="ms-3 p-0" style="color: gray;">White <br>
+          <span style="color: black; font-size: 1.2rem; font-weight: bold;">₹11,299</span></p> 
+        <button type="button" class="btn btn-dark" style="margin-left: 70px; margin-bottom: 30px;">Add to cart</button>
+    </div>
+
+
+    
+
+
+  </div>
+
+
+  <div class="poster">
+
+    <img src="./images/signatureposter.webp" alt="" height="970px" style="margin-top: 165px;">
+    <div class="overlay1" style="color: white;">Explore</div>
+  </div>
+
+
+</div>
+
+
+<br><br><br>
+
+
+<br>
+<h1 style="margin-top: 100px; margin-left: 30px;">Stores</h1> <br> <br>
+
+
+<div class="stores">
+  <div class="s1">
+      <div class="flip-card">
+          <div class="front">
+              <img src="./images/delhi.webp" alt="">
+          </div>
+          <div class="back">Delhi Store <br> <br>
+            Connaught Place, Outer Circle
+            Address: 45A, Regal Building, Connaught Place, New Delhi, 110001</div>
+      </div>
+  </div>
+
+  <div class="s1">
+      <div class="flip-card">
+          <div class="front">
+              <img src="./images/hyderabad.webp" alt="">
+          </div>
+          <div class="back">Hyderabad Store <br><br>
+           &nbsp; &nbsp;   Banjara Hills, Road No. 12
+           &nbsp;&nbsp;&nbsp; &nbsp;Address: 102, Pearl Plaza, Banjara Hills, Hyderabad, Telangana 500034</div>
+      </div>
+  </div>
+
+  <div class="s1">
+      <div class="flip-card">
+          <div class="front">
+              <img src="./images/mumbai.webp" alt="">
+          </div>
+          <div class="back">Mumbai Store <br><br>
+            Bandra West, Linking Road
+            &nbsp;Address: 78, Urban Arcade, Linking Road, Bandra West, Mumbai, Maharashtra 400050</div>
+      </div>
+  </div>
+
+  <div class="s1">
+      <div class="flip-card">
+          <div class="front">
+              <img src="./images/banglore.webp" alt="">
+          </div>
+          <div class="back">Bangalore Store <br><br>
+            Indiranagar, 100 Feet Road
+            &nbsp;&nbsp;&nbsp;  Address: 36, Vogue Towers, 100 Feet Road, Indiranagar, Bangalore, Karnataka 560038 </div>
+      </div>
+  </div>
+</div>
+ <br><br>
+
+
+
+<footer style="background-color: black;">
+
+  <div class="f1">
+    <video src="./images/Urban Step.mp4" autoplay loop muted  style="height: 300px; width: 150px;"></video>
+  </div>
+
+  <div class="f1">
+    
+    <ul style="list-style-type: none; line-height: 2;">
+      <li><h2>INFO</h2> <br></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">Releases</a></li>
+      <li><a href="">Stores</a></li>
+      <li><a href="">Brands</a></li>
+      <li><a href="">Blogs</a></li>
+    </ul>
+  </div>
+
+
+  <div class="f1">
+    
+    <ul style="list-style-type: none; line-height: 2;">
+      <li><h2>POLICIES</h2> <br></li>
+      <li> <a href="">Help Center</a></li>
+      <li><a href="">Privacy Policy</a></li>
+      <li><a href="">Returns & Exchange</a></li>
+      <li><a href="">Terms & Condition</a></li>
+      <li><a href="">Order & Shipping</a></li>
+      <li><a href="">Terms of Service</a></li>
+    </ul>
+  </div>
+
+
+  <div class="f1">
+    <h2>OUR SOCIALS</h2> <br>
+    <i class="fa-brands fa-square-facebook" style="color: #ffffff; font-size: 25px;"></i> &nbsp;
+    <i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 25px;"></i>&nbsp;
+    <i class="fa-brands fa-youtube" style="color: #ffffff; font-size: 25px;"></i>&nbsp;
+    <i class="fa-brands fa-x-twitter" style="color: #ffffff; font-size: 25px;"></i>
+    
+  </div>
+
+  <div class="f1">
+    <ul style="list-style-type: none; line-height: 2;">
+      <li><h2>MORE</h2> <br></li>
+      <li><a href="">Merchandise</a></li>
+      <li><a href="">Offers</a></li>
+      <li><a href="">Online Policy</a></li>
+      <li><a href="">Shipment</a></li>
+     
+    
+  </div>
+
+  <hr>
+
+
+
+</footer> 
+
+<div class="f2 " style=" text-align: center;margin-top: 10px;">
+    
+  <a href="">English</a>&nbsp;&nbsp;&nbsp;
+  <a href="">TOU</a>&nbsp;&nbsp;&nbsp;
+  <a href="">Privacy</a>&nbsp;&nbsp;&nbsp;
+  <a href="">Community</a>&nbsp;&nbsp;&nbsp;
+  <a href="">Cookie Preferences</a>&nbsp;&nbsp;&nbsp;
+  <a href="">Do not sell or share my personal information</a>
+        
+    </div>
+    <br>
+     <p style="text-align: center;">&copy; All Rights Reserved @2025 - Urban Step </p>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- 
+ </div>    -->
+
+
+
+</body>
+</html>

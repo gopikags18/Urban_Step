@@ -1,0 +1,453 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Nunito",serif;
+}
+
+.urban{
+    font-size: 70px;
+    font-family: "Nunito", serif;
+    font-weight: bold;
+    margin-left: -20px;
+}
+
+.portion1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+    gap: 10px;
+}
+
+.badge {
+    font-size: 0.75rem;
+   
+}
+
+
+.product {
+    position: relative;
+    width: 300px; 
+    overflow: hidden;
+    border-radius: 10px;
+     /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.product img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.product .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+   
+}
+
+.product:hover .default-img {
+    opacity: 0;
+    transform: scale(1.1); 
+  
+}
+
+.product:hover .hover-img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+.imagebox{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); 
+    gap: 5px; 
+    padding: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.offcanvas-body ul
+{
+list-style-type: none;
+/* background: url(./images/signatureposter.webp);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat; */
+}
+
+.offcanvas-body ul li
+{
+  line-height: 2;
+  text-decoration: none;
+  font-size: 18px;
+}
+.offcanvas-body li a{
+    text-decoration: none;
+    color: rgb(62, 59, 59);
+}
+.offcanvas-body li a:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #f8f8f8; 
+    padding: 10px 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    animation: scroll 10s linear infinite;
+    margin: 20px;
+}
+
+.marquee-content img {
+    width: 150px; 
+    height: auto;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.parallax-section {
+    background-image: url('./images/poster22.jpg'); 
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1.2;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+} 
+
+
+
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.parallax video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.parallax h1 {
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 20px; 
+    /* border-radius: 10px; */
+}
+
+
+.parallax .btn {
+    margin-top: 20px;
+}
+
+
+.text-center{
+    color: whitesmoke;
+}
+
+.price-container {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.original-price {
+    text-decoration: line-through; 
+    color: gray;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    color: green; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+}
+}
+
+
+
+.discount-percent {
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    font-weight: bold;
+    display: inline-block;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.photoflex {
+    display: flex;
+    justify-content: center;  
+    gap: 20px; 
+    width: 100%;
+}
+
+
+.photo {
+    position: relative;
+    width: 700px;  
+    height: 600px; 
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.photo:hover img {
+    opacity: 0.6;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+
+.mainflex
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1000px;
+}
+
+.multiplephotos{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); 
+    margin-top: 280px;
+    gap: 15px; 
+    padding: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.poster {
+    position: relative;
+    /* width: 700px; 
+    height: 600px;  */
+    overflow: hidden;
+}
+
+.poster img {
+    /* width: 100%;
+    height: 100%; */
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.poster:hover img {
+    opacity: 0.6;
+}
+
+.poster:hover .overlay1{
+    opacity: 1;
+   
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 970px;
+    margin-top: 162px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/* .stores
+{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+}
+.s1 img
+{
+    border-radius: 10px;
+} */
+
+
+
+.stores {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+.s1 {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+
+.flip-card .front, 
+.flip-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.flip-card .front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.flip-card .back {
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    transform: rotateY(180deg);
+}
+
+
+.s1:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.f1
+{
+    color: white;
+    margin-top: 30px;
+    
+}
+
+.f1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.f1 a:hover {
+    text-decoration: underline;
+}
+
+.f1 i:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.f2 a {
+    text-decoration: none;
+    color: black;
+    margin-top: 40px;
+}
+
+.f2 a:hover{
+    text-decoration: underline;
+}
